@@ -1,0 +1,29 @@
+
+.navbar{
+    background-color: rgb(255, 255, 255);
+    height: 10vh;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.navbarMain{
+    height: 100%;
+    padding: 0 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right{
+display: flex;
+}
+.right .bellIconContainer{
+    margin-right: 10px;
+    margin-top: 10px;
+
+}
+.right .profileIconContainer{
+   font-size: 40px;
+   color: rgb(255, 0, 0);
+   margin-top: 10px;
+}
