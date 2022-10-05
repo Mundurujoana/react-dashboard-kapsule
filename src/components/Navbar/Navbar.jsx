@@ -14,6 +14,9 @@ const Navbar = () => {
     <img src='../public/images/kapsule-logo.jpeg'  alt='logo' />
     
     </div>
+    <div className="center">
+      <input type="text" placeholder='seacrh.......................' />
+    </div>
       <div className="right">
         <div className="bellIconContainer">
    <FaRegBell />
