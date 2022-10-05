@@ -1,22 +1,35 @@
 import React from 'react'
 import './Sidenav.css'
+import { FaHome, FaJava, FaFigma, FaLeanpub} from "react-icons/fa";
 
 const Sidenav = () => {
   return (
     <div className='sidenav'>
-        <div className="top">
-            <h1>UI COMPONENTS</h1>
-        </div>
-        <div className="center">
-                <ul>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                    <li><span></span></li>
-                </ul>
-        </div>
-        <div className="bottom">bottom</div>
+       <div className="sideWrapper">
+        <div className="sideMenu">
+          <h3 className="sidenavTitle"> Dashbaord </h3> 
+          <ul className='sidenavList'>
+            <li className='sidenavListItem'>
+{/* <FaPython/> Python */}
+<FaHome/> Home
+            </li>
+            <li className='sidenavListItem'>
+      {/* <FaPhp/> Php */}
+      < FaLeanpub/> Learn
+            </li>
+            <li className='sidenavListItem'>
+      <FaJava/> Java
+           </li>
+           <li className='sidenavListItem'>
+ <FaFigma/> Figma
+          </li>
+          </ul>
+          </div>
+       </div>
     </div>
   )
 }
 
 export default Sidenav
+
+

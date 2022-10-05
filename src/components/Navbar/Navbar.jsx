@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 // import { NotificationsNone } from '@material-i/icons';
-import { FaRegBell, FaUserCircle, FaCog } from "react-icons/fa";
+import { FaRegBell, FaUserCircle, FaCog, FaSistrix } from "react-icons/fa";
 
 
 
@@ -14,8 +14,9 @@ const Navbar = () => {
     <img src='../public/images/kapsule-logo.jpeg'  alt='logo' />
     
     </div>
-    <div className="center">
-      <input type="text" placeholder='seacrh.......................' />
+    <div className="search-center">
+      <input type="text" placeholder='seacrh....' />
+      <FaSistrix/>
     </div>
       <div className="right">
         <div className="bellIconContainer">

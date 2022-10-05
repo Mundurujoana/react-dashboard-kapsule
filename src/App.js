@@ -8,6 +8,7 @@ function App() {
      < Navbar/>
      <div className="sideContainer">
      < Sidenav/>
+     {/* <div className="container">other pages</div> */}
      </div>
     </div>
   );
