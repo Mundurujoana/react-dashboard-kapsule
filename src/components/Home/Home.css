@@ -1,0 +1,8 @@
+
+.home{
+    flex: 4;
+}
+
+.chart-container{
+    display: flex;
+}

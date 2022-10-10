@@ -1,35 +1,54 @@
-import React from 'react'
+// import React from 'react'
 import './Sidenav.css'
-import { FaHome, FaJava, FaFigma, FaLeanpub} from "react-icons/fa";
+import { FaMicrosoft, FaChartLine, FaUpload,FaBookReader, FaArrowLeft, FaBookOpen} from "react-icons/fa";
 
 const Sidenav = () => {
   return (
-    <div className='sidenav'>
-       <div className="sideWrapper">
-        <div className="sideMenu">
-          <h3 className="sidenavTitle"> Dashbaord </h3> 
-          <ul className='sidenavList'>
-            <li className='sidenavListItem'>
-{/* <FaPython/> Python */}
-<FaHome/> Home
-            </li>
-            <li className='sidenavListItem'>
-      {/* <FaPhp/> Php */}
-      < FaLeanpub/> Learn
-            </li>
-            <li className='sidenavListItem'>
-      <FaJava/> Java
-           </li>
-           <li className='sidenavListItem'>
- <FaFigma/> Figma
-          </li>
-          </ul>
-          </div>
-       </div>
-    </div>
+    <div className="sidebar">
+   <div className="sidebarWrapper">
+  <div className="sidebarMenu">
+    <h3 className="sidebarTitle"> DASHBOARD </h3>
+    <ul className="sidebarList">
+      <li className="sidebarListItem active">
+        <FaMicrosoft className="sidebarIcon" />
+        App
+      </li>
+     
+      <li className="sidebarListItem">
+        <FaUpload  className="sidebarIcon" />
+        Upload 
+      </li>
+
+      <li className="sidebarListItem">
+        <FaChartLine className="sidebarIcon" />
+        Reporting
+      </li>
+
+      <li className="sidebarListItem">
+        <FaBookOpen className="sidebarIcon" />
+        Knowledge Base
+      </li>
+
+      <li className="sidebarListItem">
+        <FaBookReader className="sidebarIcon" />
+        Knowledge Base
+      </li>
+<hr />
+      <li className="sidebarListItem">
+        <FaArrowLeft className="sidebarIcon" />
+        Logout
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>  
   )
 }
 
-export default Sidenav
+export default Sidenav;
 
 
+
+
+
+  

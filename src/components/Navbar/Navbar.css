@@ -1,7 +1,6 @@
 
 .navbar{
     background-color: rgb(255, 255, 255);
-    height: 10vh;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -14,6 +13,7 @@
     justify-content: space-between;
 }
 
+
 .right{
 display: flex;
 }
@@ -24,8 +24,8 @@ display: flex;
 
 }
 .right .profileIconContainer{
-   font-size: 40px;
-   color: rgb(255, 0, 0);
+   font-size: 35px;
+   color: #4BA095;
    margin-top: 10px;
 }
 
@@ -33,18 +33,43 @@ display: flex;
     display: flex;
     align-items: center;
     padding: 3px;
-    border: 0.5px solid rgb(0, 0, 0);
+    border: 0.5px solid  color #323331;
 }
 
 input{
-    border: none;
     outline: none;
   width: 300px;
   height: 4vh;
-   
+}
+input:focus{
+    color: #323331;
 }
 
-input:focus{
-    color:#4CA093 ;
 
+
+hr{
+    height: 0;
+    border: 0.5px solid lightgray;
+    margin-top: 180px;
+}
+
+.name{
+    font-size: 20px;
+    color: #323331;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+}
+
+.searchIcon{
+    height: 32px;
+    width: 30px;
+    background-color: hsl(172, 36%, 46%);
+    color: aliceblue;
+   border: none;
+   font-size: 12px;
+   margin-bottom: 2px;
+   cursor: pointer;
 }

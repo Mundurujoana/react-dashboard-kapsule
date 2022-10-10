@@ -1,22 +1,23 @@
 import React from 'react'
 import './Navbar.css'
-// import { NotificationsNone } from '@material-i/icons';
+import logo from "./kapsule-logo-bg.png";
 import { FaRegBell, FaUserCircle, FaCog, FaSistrix } from "react-icons/fa";
-
-
-
 
 const Navbar = () => {
   return (
     <div className='navbar'>
      <div className="navbarMain">
       <div className="left">
-    <img src='../public/images/kapsule-logo.jpeg'  alt='logo' />
-    
+    <img src={logo} alt='logo'className='logo' />
+
+    <div>
+
+    </div>
+
     </div>
     <div className="search-center">
       <input type="text" placeholder='seacrh....' />
-      <FaSistrix/>
+      <FaSistrix className='searchIcon'/>
     </div>
       <div className="right">
         <div className="bellIconContainer">
@@ -25,6 +26,7 @@ const Navbar = () => {
         </div>
     <div className="profileIconContainer">
           < FaUserCircle/>
+          <span className='name'>Joana</span>
         </div> 
       </div>
      </div>

@@ -1,0 +1,67 @@
+
+.widget {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .item {
+    width: 150px;
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .widgetContainer{
+      margin: 10px 0px;
+      display: flex;
+      align-items: center;
+  }
+  
+  .widgetMoney{
+      font-size: 30px;
+      font-weight: 600;
+  }
+
+  
+  .widgetIcon{
+      font-size: 27px;
+      margin-left: 5px;
+      color: #4BA095;
+      margin-bottom: 7px;
+  }
+    
+  .widgetRate{
+    align-items: center;
+    margin-left: 5px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #323331;
+   
+}
+
+  .widgetSub{
+      font-size: 20px;
+      color: #323331;
+      margin-left: 5px;
+      font-weight: bold;
+  }
+
+  .welcome{
+  /* text-align: center; */
+  padding-top: 10px;
+  padding-left: 15px;
+  color: #323331;
+  font-size: 25px;
+  }
+
+
+  /* .linkedin{
+    text-decoration: none;
+    background-color: aqua;
+    padding: 10px; 
+  } */
+
