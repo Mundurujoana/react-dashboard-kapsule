@@ -1,7 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import logo from "./kapsule-logo-bg.png";
-import { FaRegBell, FaUserCircle, FaCog, FaSistrix } from "react-icons/fa";
+import { FaRegBell, FaUserCircle, FaCog} from "react-icons/fa";
+import SearchBar from "../../components/Navbar/SearchBar";
 
 const Navbar = () => {
   return (
@@ -16,8 +17,7 @@ const Navbar = () => {
 
     </div>
     <div className="search-center">
-      <input type="text" placeholder='seacrh....' />
-      <FaSistrix className='searchIcon'/>
+      <SearchBar/>
     </div>
       <div className="right">
         <div className="bellIconContainer">
