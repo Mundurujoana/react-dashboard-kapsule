@@ -3,10 +3,10 @@ import './Widget.css'
 import { FaTwitter, FaInstagramSquare, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 
 
-const Widget = () => {
+const Widget = ({color}) => {
   return (
     <div className="welcome">
-        <h2 className='welcome'>Welcome Joana!</h2>
+        <h2 className='welcome'>Welcome To KapsuleApp Store </h2>
   
     <div className="widget">
       <div className="item">
@@ -34,18 +34,16 @@ const Widget = () => {
         <span className="widgetSub"> Facebook </span>
       </div>
 
-       {/* <div className="item">
-        <span className="title">Revanue</span>
-        <div className="widgetContainer">
-        <span className="widgetRate">$2,415</span>
-          <span className="featuredMoneyRate">
-            -11.4 <FaInstagramSquare  className="featuredIcon negative"/>
-          </span> 
-        </div>
-        <span className="widgetSub">Compared to last month</span>
-      </div> */}
 </div>
+<hr style={{
+            color: 'red',
+            backgroundColor: 'black',
+            marginTop: 20
+        }}
+    />
     </div>
+    
   );
 }
+
 export default Widget

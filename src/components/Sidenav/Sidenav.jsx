@@ -31,7 +31,7 @@ const Sidenav = () => {
 
       <li className="sidebarListItem">
         <FaBookReader className="sidebarIcon" />
-        Knowledge Base
+        Documentation
       </li>
 <hr />
       <li className="sidebarListItem">
