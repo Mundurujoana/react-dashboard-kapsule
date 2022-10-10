@@ -11,27 +11,34 @@ const Widget = ({color}) => {
     <div className="widget">
       <div className="item">
           <FaLinkedin  className="widgetIcon"/>
-          <p className="widgetRate">Ksh 2415</p>
         <p className="widgetSub"> Linkedin </p>
-        {/* <a className='linkedin' href="">linkedin</a> */}
+        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
+      <button type='submit' className='button' >linkedin</button>
+        </a>
       </div>
-
+     
       <div className="item">
           <FaTwitter  className="widgetIcon"/>
-          <p className="widgetRate">Ksh 2415</p>
-        <span className="widgetSub"> Twitter </span>
+          <p className="widgetSub"> Twitter </p>
+        <a href="https://twitter.com/home" target="_blank" rel="noreferrer">
+        <button type='submit' className='button' > Twitter </button>
+        </a>
       </div>
       
       <div className="item">
           <FaInstagramSquare  className="widgetIcon" />
-          <p className="widgetRate">Ksh 2415</p>
-        <span className="widgetSub"> Instagram </span>
+          <p className="widgetSub"> Instagram </p>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+        <button type='submit' className='button' > Instagram </button>
+        </a>
       </div>
 
       <div className="item">
           <FaFacebookSquare  className="widgetIcon" />
-          <p className="widgetRate">Ksh 2415</p>
-        <span className="widgetSub"> Facebook </span>
+          <p className="widgetSub"> Facebook </p>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+        <button type='submit' className='button' > Facebook </button>
+        </a>
       </div>
 
 </div>
