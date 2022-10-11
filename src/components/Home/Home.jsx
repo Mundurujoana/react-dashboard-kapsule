@@ -5,6 +5,7 @@ import BarChart from '../Charts/BarChart'
 import { AppData } from '../Charts/Data'
 import PieChart from '../Charts/PieChart'
 
+
 const Home = () => {
   const [appData, setUserData] = useState({
     labels: AppData.map((data) => data.year),

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Widget.css'
 import { FaTwitter, FaInstagramSquare, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
-
+import ProgressBar from '../ProgressBar'
 
 const Widget = ({color}) => {
   return (
@@ -33,14 +33,13 @@ const Widget = ({color}) => {
         </a>
       </div>
 
-      <div className="item">
-          <FaFacebookSquare  className="widgetIcon" />
-          <p className="widgetSub"> Facebook </p>
-        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-        <button type='submit' className='button' > Facebook </button>
-        </a>
-      </div>
 
+      <div className="progress">
+        <p className="widgetSub">  Total Revenue </p>
+      <ProgressBar  />
+      </div>
+    
+        
 </div>
 <hr style={{
             color: 'red',
@@ -54,3 +53,15 @@ const Widget = ({color}) => {
 }
 
 export default Widget
+
+
+
+
+
+
+    {/* <FaFacebookSquare  className="widgetIcon" />
+          <p className="widgetSub"> Facebook </p>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+        <button type='submit' className='button' > Facebook </button>
+        </a>
+      */}
