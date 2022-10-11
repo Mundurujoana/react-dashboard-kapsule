@@ -1,5 +1,5 @@
 
-# A Front-end dashboard using Reac t.jsframework and ChartJS chart library containing;
+# A Front-end dashboard using React.js framework and ChartJS chart library containing;
 A top navbar with a logo on the right and a profile icon on the left.
 A side-nav drawer with sub-sections.
 Body
