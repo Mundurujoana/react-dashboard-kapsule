@@ -1,6 +1,6 @@
 import React from 'react'
 import './Widget.css'
-import { FaTwitter, FaInstagramSquare, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import ProgressBar from '../ProgressBar'
 
 const Widget = ({color}) => {
@@ -58,10 +58,3 @@ export default Widget
 
 
 
-
-    {/* <FaFacebookSquare  className="widgetIcon" />
-          <p className="widgetSub"> Facebook </p>
-        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-        <button type='submit' className='button' > Facebook </button>
-        </a>
-      */}

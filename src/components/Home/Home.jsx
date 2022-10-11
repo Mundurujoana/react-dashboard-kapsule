@@ -28,6 +28,7 @@ const Home = () => {
 
   return (
     <div>
+      
 <Widget/>
 
 <div className='chart-container'>
