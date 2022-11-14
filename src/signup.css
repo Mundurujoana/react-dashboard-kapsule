@@ -1,0 +1,196 @@
+
+body {
+  background: #4D9F92;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.errors{
+  color: rgb(255, 0, 0);
+  font-size: 13px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-title {
+  font-size: 35px;
+padding-top: 15px;
+color: #1e1d1d;
+}
+
+.content__input--form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__input--form > label > input {
+  box-sizing: border-box;
+  font-family: "Inter";
+  width: 300px;
+  height: 45px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgb(0, 0, 0);
+  outline: none;
+}
+
+.content__input--form > label > input::placeholder {
+  color: rgb(104, 100, 100);
+  font-size: 13px;
+}
+.content__input--form > label > input:focus {
+  color: rgb(85, 21, 21);
+  font-size: 13px;
+}
+
+.content__submit > .btn-sign {
+  height: 40px;
+  width: 300px;
+  border: none;
+  border-radius: 13px;
+  margin-bottom: 30px;
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.content__submit > .google-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #4385F5;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  height: 6vh;
+}
+
+.google-btn__google-icon {
+  background-color: white;
+  background-image: url("https://img.icons8.com/color/50/000000/google-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  height: 90%;
+  width: 20%;
+  margin-right: 30px;
+  cursor: pointer; 
+}
+
+
+.content__submit--line {
+  width: 60%;
+  height: 1px;
+  background-color: white;
+}
+
+.content__submit > p, .cont__footer p {
+  font-weight: 200;
+  margin-top: 20px;
+ 
+}
+
+.cont__footer p {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    margin: 0px 20px;
+  }
+
+  .content__input--form {
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .content__submit {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .content__footer {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+
+  .main-container__ {
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    height: 80vh;
+    padding: 5%;
+  }
+  
+  .content__inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transform: translate(0, 5%);
+    overflow: hidden;
+  }
+  
+  .content__submit {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid white;
+  }
+  
+  .cont__footer {
+    width: 90%;
+  }
+}
+
+.no-select{
+  letter-spacing: 2px;
+}
+
+.link{
+  color: #ffffff;
+font-weight: bold;
+text-decoration: underline;
+}
+
+.image{
+  width: 50px;
+  height: 50px;
+}
+
+.btn-file{
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 8px 2px;
+  cursor: pointer;
+}

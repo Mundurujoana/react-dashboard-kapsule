@@ -1,23 +1,25 @@
 
 .widget {
-    margin-top: 25px;
+    margin-top: 15px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
   .item {
     width: 150px;
-    margin: 0px 20px;
+    margin: 0px 10px;
     padding: 30px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 3px;
+    transition: 3s;
   }
   
   .widgetContainer{
       margin: 10px 0px;
       display: flex;
       align-items: center;
+      color: rgb(255, 255, 255);
   }
   
   .widgetMoney{
@@ -29,7 +31,7 @@
   .widgetIcon{
       font-size: 27px;
       margin-left: 5px;
-      color: #4BA095;
+      color: #050505;
       margin-bottom: 7px;
   }
     
@@ -38,7 +40,7 @@
     margin-left: 5px;
     font-size: 17px;
     margin-bottom: 15px;
-    color: #323331;
+    color: #ffffff;
    
 }
 
@@ -48,14 +50,16 @@
       margin-left: 5px;
       font-weight: bold;
       margin-top: 5px;
+      font-size: 16px;
   }
+  
 
   .welcome{
   /* text-align: center; */
-  padding-top: 10px;
+  padding-bottom: 5px;
   padding-left: 15px;
   color: #323331;
-  font-size: 25px;
+  font-size: 22px;
   }
 
   .button{
@@ -66,8 +70,8 @@
       text-decoration: none;
       display: inline-block;
       font-weight: 400;
-      font-size: 16px;
-     margin-top: 20px;
+      font-size: 13px;
+     margin-top: 5px;
       cursor: pointer;
       background-color:#323331;
       margin-left: 7px;

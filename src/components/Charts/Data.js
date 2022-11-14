@@ -3,7 +3,7 @@ export const AppData = [
     {
       id: 1,
       year: 2018,
-      userGain: 90000,
+      userGain: 45000,
       userLost: 956,
     },
     {

@@ -1,8 +1,24 @@
 // import React from 'react'
 import './Sidenav.css'
 import { FaMicrosoft, FaChartLine, FaUpload,FaBookReader, FaArrowLeft, FaBookOpen} from "react-icons/fa";
+import { useNavigate } from "react-router";
+import { useUserAuth } from "../../context/UserAuthContext";
+import { signOut} from "firebase/auth";
+import { auth } from '../../Firebase';
+
 
 const Sidenav = () => {
+  const { user } = useUserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   return (
     <div className="sidebar">
    <div className="sidebarWrapper">
@@ -35,7 +51,7 @@ const Sidenav = () => {
       </li>
 <hr />
       <li className="sidebarListItem">
-        <FaArrowLeft className="sidebarIcon" />
+        <FaArrowLeft className="sidebarIcon" onClick={handleLogout} />
         Logout
       </li>
     </ul>

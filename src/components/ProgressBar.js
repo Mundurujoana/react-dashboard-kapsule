@@ -36,9 +36,9 @@ const ProgressBar = () => {
     // pathTransition: 'none',
 
     // Colors
-    pathColor: `rgba(75,160,149, ${percentage / 100})`,
-    textColor: '#F3BB3E',
-    trailColor: '#d6d6d6',
+    pathColor: `rgba(0,0,0, ${percentage / 100})`,
+    textColor: '#000000',
+    trailColor: '#ffffff',
     backgroundColor: '#4BA095',
   })}
 

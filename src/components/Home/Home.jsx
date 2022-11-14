@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import react,{ useState } from 'react'
 import './Home.css'
 import Widget from '../../components/Widget/Widget'
 import BarChart from '../Charts/BarChart'

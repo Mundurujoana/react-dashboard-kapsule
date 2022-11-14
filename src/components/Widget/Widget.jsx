@@ -44,7 +44,7 @@ const Widget = ({color}) => {
 <hr style={{
             color: 'red',
             backgroundColor: 'black',
-            marginTop: 20
+            marginTop: 25
         }}
     />
     </div>

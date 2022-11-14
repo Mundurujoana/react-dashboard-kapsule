@@ -21,12 +21,20 @@ display: flex;
 .right .bellIconContainer{
     margin-right: 10px;
     margin-top: 10px;
+    font-size: 20px;
 
 }
-.right .profileIconContainer{
-   font-size: 35px;
-   color: #F3BB3E;
-   margin-top: 10px;
+.pic{
+    height: 50px;
+    width: 50px;
+   margin-bottom: 10px;
+   overflow: hidden;
+}
+
+.name{
+    padding-top: 20px;
+    font-size: 12px;
+    padding-left: 10px;
 }
 
 input{
@@ -74,4 +82,50 @@ border: none;
   margin: 4px 2px;
   cursor: pointer;
   background-color: #4BA095;
+}
+
+
+
+/* profile */
+.editProfile{
+    background: rgba(49,49,49,0.8);
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+}
+.popup{
+    height: 450px;
+    width: 50%;
+    background: #4D9F92;
+    position: absolute;
+    top: 5%;
+    left: 48%;
+}
+.popup-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 15px;
+    align-items: center;
+   align-content: center;
+}
+
+
+.content__input--form{
+    margin-left: 250;
+
+}
+
+.update_btn{
+    border: none;
+  color: #ffffff;  
+  padding: 6px 20px;
+  letter-spacing: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+ margin-top: 40px;
+  cursor: pointer;
+  background-color: #000000;
 }

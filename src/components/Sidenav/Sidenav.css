@@ -33,11 +33,10 @@
   align-items: center;
   margin-top: 25px;
   height: 5vh;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.sidebarListItem.active,
-.sidebarListItem:hover {
+.sidebarListItem.active{
   background-color: rgb(240, 240, 255);
   color: #323331;
 }
