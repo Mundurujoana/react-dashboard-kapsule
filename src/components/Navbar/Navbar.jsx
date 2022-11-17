@@ -47,7 +47,7 @@ const Navbar = () => {
   }
 const UpdateUserData = async() =>{
   try {
-    const userRef = query(collection(db, "users"), where("uid", "==", user.uid));
+    const userRef = query(collection(db, "users"), where("uid", "==", user?.uid));
     const findUsers = await getDocs(userRef);
     findUsers.forEach( async (user) => {
       const getUser = doc(db, 'users', user.id);
@@ -58,7 +58,7 @@ const UpdateUserData = async() =>{
        profilePic:  image
       })
     })
-    alert("updated sucessfully")
+    alert("updated successfully")
   } catch (err) {
    alert(`${err.message} try again`)
   }
