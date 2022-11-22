@@ -16,9 +16,10 @@ const Navbar = () => {
   const[error, setError] = useState("")
   const [name, setName] = useState("");
   const[email, setEmail] = useState("")
-  const[location, setLocation] = useState("")
+  const[location, setLocation] = useState([])
   const [photo, setPhoto] = useState("");
   const [popup,setPop]=useState(false)
+  
   const[image, setImage] = useState("")
   const navigate = useNavigate();
 
@@ -29,6 +30,7 @@ const Navbar = () => {
       const userData = docSnap.docs[0].data() // call the data method from the doc document
       setName(userData.name)
       setPhoto(userData.profilePic)
+      setLocation(userData.location)
     } catch (err) {
       console.error(err);
     }
@@ -38,6 +40,8 @@ const Navbar = () => {
     fetchUserName();
   }, [user])
 
+  console.log(location) 
+  console.log(typeof(location)) 
 
   const handleClickOpen=()=>{
       setPop(!popup)

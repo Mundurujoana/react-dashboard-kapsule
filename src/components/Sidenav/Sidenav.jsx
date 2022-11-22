@@ -13,6 +13,7 @@ const Sidenav = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
+      localStorage.clear()
       navigate("/");
     } catch (error) {
       console.log(error.message);

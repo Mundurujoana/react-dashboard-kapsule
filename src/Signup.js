@@ -10,7 +10,8 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
 
 
-const Signup = () => {
+const Signup = () => { 
+  // const { user} = useUserAuth(auth);
   const [name, setName] = useState("")
   const [location, setLocation ] = useState("")
   const [error, setError] = useState("")

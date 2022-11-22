@@ -16,12 +16,13 @@ export const AppData = [
       id: 3,
       year: 2020,
       userGain: 89999,
-      userLost: 666,
+      userLost: 667,
     },
     {
-      id: 4,
-      year: 2021,
-      userGain: 12000,
-      userLost: 4079,
-    }
+      id: 3,
+      year: 2022,
+      userGain: 10997,
+      userLost: 456,
+    },
+
   ]

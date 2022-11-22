@@ -11,40 +11,80 @@ import { useUserAuth } from "../../context/UserAuthContext";
 
 
 const Home = () => {
-  const { user} = useUserAuth(auth);
+  const { user} = useUserAuth();
+  console.log(user,'authUser')
   const [userInfo, setUserInfo] = useState([])
+  const [graphs, setGraphs] = useState([])
+  const [all, setAll] = useState()
+  
+
+  //get the specific loggedIn user id and the location
+  const loggedInUser = userInfo?.find(info => info.uid === user?.uid)
+  console.log(loggedInUser?.uid)
+  //get the the location of a specific loggedIn user
+  const graphData = graphs?.find(graph => graph.id === loggedInUser?.location)
+  console.log(graphData)
 
   
-  const fetchUsers = async() => {
+
+  //fetch data from user
+const fetchUsers = async() => {
     const userRef = await getDocs(collection(db, "users")).then((querySnapshot)=>{             
                 const newData = querySnapshot.docs
                     .map((doc) => ({...doc.data()}))
                 setUserInfo(newData)          
-                console.log(newData)
             })
 }
+console.log(userInfo, "all users")
+
+//fetch data from graph
+const fetchGraphs = async() => {
+  const graphRef =  await getDocs(collection(db, "graphs")).then((querySnapshot)=>{             
+    const newGraphData = querySnapshot.docs
+        .map((doc) => ({...doc.data(), location:doc.id, status:"ok"}))
+    setGraphs(newGraphData)  
+    newGraphData.map((item) =>{
+      console.log(item.location)
+      console.log(user.location,'current user')
+    })  
+    console.log(newGraphData)      
+})
+}
+
+//rendering data from firestore
 useEffect(()=>{
   fetchUsers()
+  fetchGraphs()
+  // getAll()
 },[])
 
+//mapping through the userInfo to obtain location and eliminate duplication
 const labs = userInfo.map((dat)=> dat.location)
 let uniqueLabs = [...new Set(labs)];
-const dats = userInfo.map((dat) => dat.name)
-// AppData.map((dat) => dat.year),
-// AppData.map((dat) => dat.userGain),
 
- const state = {
-  labels: uniqueLabs,
+//mapping through the userInfo to obtain location and eliminate duplicatiob
+const ulabs = graphs.map((dat) => dat.id)
+console.log(ulabs)
+
+const dlabs = graphs.map((dat) => dat.graph1.userGain)
+console.log(dlabs)
+
+const slabs = graphs.map((dat) => dat.graph1.userLost)
+console.log(slabs)
+
+//Data for barGraphs
+ const barState = {
+  labels: ulabs,
   datasets: [
     {
-      label: 'Users',
-      data: dats,
+      label: 'Users Gained',
+      data: dlabs,
       backgroundColor: [
         "#ffffff",
         "#000000",
-          "#50AF95",
-          // "#f3ba2f",
-          // "#2a71d0",
+        "#50AF95",
+        "#c5ab3a",
+    
       ],
       borderColor: 'rgba(0,0,0,1)',
       borderWidth: 1,
@@ -52,25 +92,41 @@ const dats = userInfo.map((dat) => dat.name)
   ]
 }
 
+//Data for pieChart
+const pieState = {
+  labels: ulabs,
+  datasets: [
+    {
+      label: 'Users Lost',
+      data: slabs,
+      backgroundColor: [
+        "#ffffff",
+        "#000000",
+        "#50AF95",
+        "#c5ab3a",
+    
+      ],
+      borderColor: 'rgba(0,0,0,1)',
+      borderWidth: 1,
+    }
+  ]
+}
   return (
     <div>
       
 <Widget/>
+
 <div className='chart-container'>
-<div style={{ width:550, marginTop:50, marginLeft:30 }}>
-<BarChart chartData={state} />
+{graphData ? (
+<div style={{ width:550, marginTop:50, marginLeft:200 }}>
+<BarChart chartData={barState} />
 </div>
-{/* <div style={{ width:300, marginTop:50, marginLeft:70 }}>
-<PieChart chartData={state} />
-</div> */}
+) : (
+ <div style={{ width:550, marginTop:50, marginLeft:200}}>
+<BarChart chartData={pieState} />
+</div> 
+    )}
     </div>
-    {/* <button onClick={fetchUsers}>click</button>
-    {userInfo.map((doc) =>{
-      return(
-        <h1>{doc.email}</h1>
-      )
-    })} */}
-    
     </div>
   )
 }
