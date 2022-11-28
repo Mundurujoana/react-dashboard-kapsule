@@ -74,7 +74,7 @@ const Home = () => {
   //rendering data from firestore
   useEffect(() => {
     fetchUsers()
-    fetchGraphs()
+    // fetchGraphs()
     // getAll()
   }, [])
 
@@ -86,13 +86,13 @@ const Home = () => {
 
 
   //mapping through the userInfo to obtain location and eliminate duplicatiob
-  const ulabs = graphs.map((dat) => dat.id)
+  const ulabs = AppData.map((dat) => dat.year)
   console.log(ulabs)
 
-  const dlabs = graphs.map((dat) => dat.graph1.userGain)
+  const dlabs = AppData.map((dat) => dat.userGain)
   console.log(dlabs)
 
-  const slabs = graphs.map((dat) => dat.graph1.userLost)
+  const slabs = AppData.map((dat) => dat.userLost)
   console.log(slabs)
 
   //Data for barGraphs
