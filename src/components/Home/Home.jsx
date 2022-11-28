@@ -2,10 +2,10 @@ import react, { useState, useEffect } from 'react'
 import './Home.css'
 import Widget from '../../components/Widget/Widget'
 import BarChart from '../Charts/BarChart'
-import { AppData } from '../Charts/Data'
+// import { AppData } from '../Charts/Data'
 import PieChart from '../Charts/PieChart'
 import { auth, db } from '../../Firebase'
-import { query, collection, getDocs, doc, where, } from "firebase/firestore";
+import { query, collection, getDocs, doc, where, getDoc, } from "firebase/firestore";
 import { useUserAuth } from "../../context/UserAuthContext";
 
 
@@ -16,6 +16,7 @@ const Home = () => {
   const [graphs, setGraphs] = useState([])
   const [all, setAll] = useState();
   const [currentUserLocation, setCurrentUserLocation] = useState('');
+  const [AppData,setAppData] =useState([]);
   
   
   //get the specific loggedIn user id and the location
@@ -44,36 +45,51 @@ const Home = () => {
     const q = query(collection(db, "users"), where("uid", "==", user?.uid));
       const docSnap = await getDocs(q);
       const userData = docSnap.docs[0].data()
+      console.log(userData.location,"From fetch user")
       setCurrentUserLocation(userData.location);
   }
 
+  console.log(currentUserLocation,"Current user Location")
 
 
 
 
   //fetch data from graph
-  const fetchGraphs = async () => {
-  const [currentUserLocation, setCurrentUserLocation] = useState('');
-    const graphRef = await getDocs(collection(db, "graphs/"+currentUserLocation)).then((querySnapshot) => {
-      const newGraphData = querySnapshot.docs
-        .map((doc) => {
-          if(doc.data().location === currentUserLocation){
-           return { ...doc.data(), location: doc.id, status: "ok" }
-          }
-        })
-      setGraphs(newGraphData)
-      // newGraphData.map((item) => {
-      //   console.log(item.location)
-      //   console.log(user.location, 'current user')
-      // })
-      // console.log(newGraphData)
-    })
+  // const fetchGraphs = async () => {
+  // const [currentUserLocation, setCurrentUserLocation] = useState('');
+  //   const graphRef = await getDocs(collection(db, "graphs/"+currentUserLocation)).then((querySnapshot) => {
+  //     const newGraphData = querySnapshot.docs
+  //       .map((doc) => {
+  //         if(doc.data().location === currentUserLocation){
+  //          return { ...doc.data(), location: doc.id, status: "ok" }
+  //         }
+  //       })
+  //     setGraphs(newGraphData)
+  //     // newGraphData.map((item) => {
+  //     //   console.log(item.location)
+  //     //   console.log(user.location, 'current user')
+  //     // })
+  //     // console.log(newGraphData)
+  //   })
+  // }
+
+  const handleSyncData = async () => {
+    if(currentUserLocation !== ''){
+      const dataRef = doc(db, `graphs/Kenya`); 
+      const docSnap = await getDoc(dataRef);
+      if (docSnap.exists()) {
+        const result = docSnap.data();
+        setAppData(result.data)
+      }
+    }
+  
   }
+  
 
-
+  fetchUsers();
   //rendering data from firestore
   useEffect(() => {
-    fetchUsers()
+    handleSyncData();
     // fetchGraphs()
     // getAll()
   }, [])
